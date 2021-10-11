@@ -1,0 +1,13 @@
+.submit-button {
+  font-size: 1rem;
+  width: 100%;
+  padding: 0.7rem;
+  background-color: $color-green;
+  color: $color-white;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

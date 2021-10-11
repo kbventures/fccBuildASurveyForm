@@ -1,0 +1,11 @@
+.header {
+  margin: 3rem 0rem 1.5rem 0rem;
+  padding: 0rem 1.5rem;
+  &__title {
+    text-shadow: #1b1b32 0.25rem 0.25rem 0.3rem;
+    margin: 0.2rem;
+  }
+  &__description {
+    text-shadow: #1b1b32 0.25rem 0.25rem 0.3rem;
+  }
+}

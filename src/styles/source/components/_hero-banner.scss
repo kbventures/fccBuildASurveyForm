@@ -1,0 +1,19 @@
+.hero-banner {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: $hero-banner-bg-color;
+  background-image: linear-gradient(
+      115deg,
+      $hero-banner-lg-color1,
+      $hero-banner-lg-color2
+    ),
+    url('../../assets/hero_banner.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

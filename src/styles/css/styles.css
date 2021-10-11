@@ -1,0 +1,252 @@
+/*
+MEDIA QUERY MANAGER Source: 
+Jonas Schemdthmann Advanced CSS And Sass Course
+https://www.udemy.com/course/advanced-css-and-sass
+0-600px;        PHONE
+600 - 900px;    Tablet portrait
+900 - 1200px;   Tablet landscape
+[1200-1800] is where normal styles apply
+1800px + :      Big Desktop
+*/
+/*
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+ORDER: BASE + Typography > General Layout + Grid > Page Layout > Components
+For Media queries teh rem isn't equal to the root setup(ie:
+In our case 10px but instead browser default 16px
+Ems are the best option for media queries
+1em = 16 px;
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+@media (max-width: 20em) {
+  html .container {
+    margin-top: 0rem;
+  }
+  html .header {
+    display: none;
+  }
+  html .form {
+    padding: 2rem 1.5rem;
+  }
+  html .form__group {
+    margin: 0 0 1rem 0;
+  }
+}
+@media (max-width: 75em) {
+  html {
+    font-size: 85%;
+  }
+  html .container {
+    margin-top: 15rem;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 55%;
+  }
+  html .container {
+    margin-top: 15rem;
+  }
+}
+@media (max-width: 37.5em) {
+  html {
+    font-size: 40%;
+  }
+}
+@media (max-width: 20em) {
+  html .container {
+    margin-top: 4rem;
+  }
+  html .header {
+    display: none;
+  }
+  html .form {
+    padding: 2rem 1.5rem;
+  }
+  html .form__group {
+    margin: 0 0 1rem 0;
+  }
+}
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  color: #f3f3f3;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.header__title {
+  font-size: 2.3rem;
+}
+.header__description {
+  font-size: 1.4rem;
+}
+
+.form {
+  font-size: 1.3rem;
+}
+
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-italic-text {
+  font-style: italic !important;
+}
+
+.u-underline-text {
+  text-decoration: underline !important;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important;
+}
+
+.u-margin-top-small {
+  margin-top: 1.5rem !important;
+}
+
+.u-margin-top-medium {
+  margin-top: 4rem !important;
+}
+
+.u-margin-top-big {
+  margin-top: 8rem !important;
+}
+
+.u-margin-top-huge {
+  margin-top: 10rem !important;
+}
+
+.form {
+  background-color: rgba(27, 27, 50, 0.75);
+  border-radius: 5px;
+  padding: 3rem 2.5rem;
+  text-shadow: #1b1b32 0.25rem 0.25rem 0.3rem;
+}
+.form__group {
+  margin: 0 0 1.5rem 0;
+}
+.form__control {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.33rem;
+  background-color: #fff;
+}
+.form__label {
+  display: block;
+}
+
+.header {
+  margin: 3rem 0rem 1.5rem 0rem;
+  padding: 0rem 1.5rem;
+}
+.header__title {
+  text-shadow: #1b1b32 0.25rem 0.25rem 0.3rem;
+  margin: 0.2rem;
+}
+.header__description {
+  text-shadow: #1b1b32 0.25rem 0.25rem 0.3rem;
+}
+
+.hero-banner {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: #1b1b32;
+  background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)), url(/surveyForm/pic/italy-1587287_1280.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.submit-button {
+  font-size: 1rem;
+  width: 100%;
+  padding: 0.7rem;
+  background-color: #37af65;
+  color: #f3f3f3;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+.submit-button:hover {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+/*# sourceMappingURL=styles.css.map */
