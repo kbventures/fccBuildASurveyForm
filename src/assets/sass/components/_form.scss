@@ -3,11 +3,11 @@
 .form {
   background-color: $form-bg-color;
   border-radius: 5px;
-
+  color: -internal-light-dark(black, white);
   padding: 3rem 2.5rem;
   text-shadow: #1b1b32 0.25rem 0.25rem 0.3rem;
 
-  &__group {
+  &__group:not(:last-child) {
     margin: 0 0 1.5rem 0;
   }
 
@@ -16,9 +16,13 @@
     padding: 0.5rem;
     border-radius: 0.33rem;
     background-color: #fff;
+    font-size: inherit;
   }
 
   &__label {
     display: block;
+  }
+  &__input {
+    vertical-align: middle;
   }
 }

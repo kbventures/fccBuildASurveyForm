@@ -1,11 +1,12 @@
 import Header from './Components/Header';
-import NameForm from './Components/TestForm';
-
+import Form from './Components/Form';
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <NameForm />
+    <div className="hero-banner">
+      <div className="container">
+        <Header />
+        <Form />
+      </div>
     </div>
   );
 }
